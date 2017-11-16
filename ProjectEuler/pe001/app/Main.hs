@@ -18,4 +18,6 @@ solve range =
         |> filter multiple_of_3_5
         |> sum    
 
+(|>) :: a -> (a -> b) -> b
 (|>) x f = f x
+infixl 0 |>
