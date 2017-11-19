@@ -1,7 +1,5 @@
 module Main where
 
--- import Data.Char
-import Data.List
 import Data.Function
 import Lib
 
@@ -24,11 +22,8 @@ traverseBy :: Int -> [Int] -> [Int]
 traverseBy n xs = listEvery xs n []
 
 listEvery :: [Int] -> Int -> [Int] -> [Int]
--- listEvery [] n acc = acc
 listEvery xs n acc
     | length xs >= n = listEvery (tail xs) n ([product (take n xs)] ++ acc)
     | otherwise      = acc
-    
-    
 
 present n = n & show & putStrLn
