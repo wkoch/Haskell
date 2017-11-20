@@ -26,6 +26,7 @@ executable pe011-exe
   build-depends:       base
                      , pe011
                      , text
+                     , matrix
   default-language:    Haskell2010
 
 test-suite pe011-test

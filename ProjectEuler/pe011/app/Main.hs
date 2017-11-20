@@ -1,8 +1,9 @@
 module Main where
 
-import qualified Data.Text as T
 import Data.Function
 import Data.List
+import qualified Data.Text as T
+import qualified Data.Matrix as Mtx
 import Lib
 
 main :: IO ()
@@ -32,7 +33,6 @@ convert s = s
 
 biggestProduct n xs = maximum $ [(horizontally n xs)] ++ [(vertically n xs)]
 
-
 perpendicular :: [Int] -> Int -> [(Int,[Int])] -> (Int,[Int])
 perpendicular [] n acc = maximum acc
 perpendicular xs n acc =
@@ -51,3 +51,11 @@ vertically n xs =
     & transpose
     & map (\line -> perpendicular line n [] )
     & maximum
+
+downward n xs =
+    xs
+
+upward n xs = xs
+
+diagonally f n [] acc = acc
+diagonally f n xs acc = xs
