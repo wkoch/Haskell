@@ -12,6 +12,3 @@ squareOfSum = square . sum
 
 solve :: [Int] -> Int
 solve xs = squareOfSum xs - sumOfSquares xs
-
-present :: Int -> IO ()
-present = putStrLn . show
