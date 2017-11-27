@@ -1,6 +1,5 @@
 module Lib where
 
-import Data.Function
 
 square :: Int -> Int
 square = (^ 2)
