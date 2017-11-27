@@ -4,4 +4,4 @@ import Data.Function
 import Lib
 
 main :: IO ()
-main = 999 & largestPalindromeProduct & present
+main = 999 & largestPalindromeProduct & print

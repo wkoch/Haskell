@@ -11,6 +11,3 @@ largestPalindromeProduct n =
     [ x*y | x <- [n,n-1..1], y <- [n,n-1..1], isPalindrome (x*y) ]
         & sort
         & last
-
-present :: Int -> IO ()
-present n = n & show & putStrLn
