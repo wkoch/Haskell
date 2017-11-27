@@ -1,6 +1,9 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Data.Function
+import Data.Numbers.Primes
+
+solve :: Int -> Int
+solve n = n & primeFactors & last
+
+present n = n & show & putStrLn
