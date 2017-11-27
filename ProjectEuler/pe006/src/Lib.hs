@@ -2,7 +2,7 @@ module Lib where
 
 
 square :: Int -> Int
-square = (^ 2)
+square n = n * n
 
 sumOfSquares :: [Int] -> Int
 sumOfSquares = sum . map square
