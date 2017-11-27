@@ -22,6 +22,11 @@ main = hspec $ do
             fib 10 `shouldBe` 55
     
     
+    describe "Lists fibonacci numbers" $ do
+        it "First 10 fibonacci numbers" $
+            (take 10 $ listFibs) `shouldBe` [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    
+    
     describe "Solves Project Euler problem 002" $ do
         it "Solves the example" $
             solve 89 `shouldBe` 44
