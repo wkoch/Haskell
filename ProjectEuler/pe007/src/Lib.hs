@@ -1,6 +1,8 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Data.Function
+import Data.Numbers.Primes
+
+
+getNthPrime :: Int -> Int
+getNthPrime n = primes & take n & last
