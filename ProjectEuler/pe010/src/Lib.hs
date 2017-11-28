@@ -1,6 +1,6 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Data.Numbers.Primes
+
+sumOfPrimes :: Int -> Int
+sumOfPrimes n = sum $ filter isPrime [1..n]
