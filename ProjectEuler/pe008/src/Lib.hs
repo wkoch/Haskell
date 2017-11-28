@@ -1,6 +1,7 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+
+traverseBy :: Int -> [Int] -> [[Int]]
+traverseBy n xs
+    | length xs >= n = [take n xs] ++ (traverseBy n $ tail xs)
+    | otherwise      = []
