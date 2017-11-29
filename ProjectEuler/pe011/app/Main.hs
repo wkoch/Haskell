@@ -16,8 +16,7 @@ stringToText :: String -> T.Text
 stringToText s = T.pack (s :: String)
 
 
-textToString :: T.Text -> String
-textToString t = T.unpack (t :: T.Text)
+
 
 
 textToInt :: T.Text -> Int

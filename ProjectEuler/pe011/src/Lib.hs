@@ -1,6 +1,7 @@
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import qualified Data.Text as T
+
+
+textToString :: T.Text -> String
+textToString t = T.unpack (t :: T.Text)
