@@ -1,7 +1,5 @@
 import Lib
 import Test.Hspec
-import Test.QuickCheck
-import Control.Exception (evaluate)
 
 main :: IO ()
 main = hspec $ do
@@ -18,11 +16,11 @@ main = hspec $ do
         it "fib 7 is 13" $
             fib 7 `shouldBe` 13
 
-        it "Fib 10 is 55" $ do
+        it "Fib 10 is 55" $
             fib 10 `shouldBe` 55
     
     
-    describe "Lists fibonacci numbers" $ do
+    describe "Lists fibonacci numbers" $
         it "First 10 fibonacci numbers" $
             (take 10 $ listFibs) `shouldBe` [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
     
