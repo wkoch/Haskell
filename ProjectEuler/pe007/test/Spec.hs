@@ -1,10 +1,8 @@
 import Lib
 import Test.Hspec
-import Test.QuickCheck
-import Control.Exception (evaluate)
 
 main :: IO ()
-main = hspec $ do
+main = hspec $
     describe "returns the nth prime number" $ do
         it "3rd prime" $
             getNthPrime 3 `shouldBe` 5
