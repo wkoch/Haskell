@@ -1,7 +1,5 @@
 import Lib
 import Test.Hspec
-import Test.QuickCheck
-import Control.Exception (evaluate)
 
 main :: IO ()
 main = hspec $ do
@@ -18,15 +16,15 @@ main = hspec $ do
         it "5 squared is 25" $
             square 5 `shouldBe` 25
 
-        it "6 squared is 36" $ do
+        it "6 squared is 36" $
             square 6 `shouldBe` 36
     
     
-    describe "Returns the sum of squares of a given list" $ do
+    describe "Returns the sum of squares of a given list" $
         it "The sum of the squares of the first 10 numbers is" $
             sumOfSquares [1..10] `shouldBe` 385
     
-    describe "Returns the square of the sum of a given list" $ do
+    describe "Returns the square of the sum of a given list" $
         it "The square of the sum of the first ten numbers is" $
             squareOfSum [1..10] `shouldBe` 3025
     
