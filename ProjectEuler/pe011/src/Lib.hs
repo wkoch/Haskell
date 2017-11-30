@@ -23,15 +23,6 @@ convert s = s
     & map (map textToInt)
 
 
-biggestProduct :: Int -> [[Int]] -> (Int, [Int])    
-biggestProduct n xs =
-    [horizontally n xs] ++ 
-    [vertically n xs] ++ 
-    [downward n xs] ++ 
-    [upward n xs]
-    & maximum
-
-
 getMaximum :: Int -> [[Int]] -> (Int, [Int])
 getMaximum n xs = xs
     & dropWhile (\line -> length line < n )
@@ -40,8 +31,7 @@ getMaximum n xs = xs
 
 process :: [Int] -> Int -> [(Int,[Int])] -> (Int,[Int])
 process [] _ acc = maximum acc
-process xs n acc =
-    acc ++ (:[]) (product $ take n xs, take n xs)
+process xs n acc = acc ++ (:[]) (product $ take n xs, take n xs)
     & process (tail xs) n
 
 
@@ -63,3 +53,12 @@ diagonals []       = []
 diagonals ([]:xss) = xss
 diagonals xss      = zipWith (++) (map ((:[]) . head) xss ++ repeat [])
                                     ([]:(diagonals (map tail xss)))
+
+
+biggestProduct :: Int -> [[Int]] -> (Int, [Int])    
+biggestProduct n xs =
+    [horizontally n xs] ++ 
+    [vertically n xs] ++ 
+    [downward n xs] ++ 
+    [upward n xs]
+    & maximum
