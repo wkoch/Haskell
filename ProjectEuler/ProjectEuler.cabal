@@ -1,13 +1,13 @@
 name:                ProjectEuler
 version:             0.1.0.0
 synopsis:            Project Euler solutions
-homepage:            https://gitlab.com/wkoch/Haskell
+homepage:            https://gitlab.com/wkoch/Haskell/tree/master/ProjectEuler
 license:             MIT
 license-file:        LICENSE
 author:              William Koch
 maintainer:          wkochbrg@gmail.com
 copyright:           William Koch
-category:            Web
+category:            Learning
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 -- To avoid duplicated efforts in documentation and dealing with the
 -- complications of embedding Haddock markup inside cabal files, it is
 -- common to point users to the README.md file.
-description:         Please see the README on Gitlab at <https://gitlab.com/wkoch/Haskell>
+description:         Please see the README on Gitlab at <https://gitlab.com/wkoch/Haskell/tree/master/ProjectEuler>
 
 library
   hs-source-dirs:      src
@@ -43,4 +43,4 @@ test-suite ProjectEuler-test
 
 source-repository head
   type:     git
-  location: https://gitlab.com/wkoch/Haskell/blob/master/ProjectEuler
+  location: https://gitlab.com/wkoch/Haskell/tree/master/ProjectEuler
