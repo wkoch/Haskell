@@ -1,6 +1,7 @@
 module Main where
 
 import Lib
+import Data.Function
 
 main :: IO ()
-main = print $ pythagoreanTriplets 1000
+main = someFunc
