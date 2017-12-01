@@ -5,7 +5,7 @@ import Data.Char (isDigit)
 import Data.Monoid
 import Runner
 
-
+main :: IO ()
 main = defaultMain $ do
 
     programName "Project Euler"
@@ -20,7 +20,7 @@ main = defaultMain $ do
     -- a flag 'i' or '--int' requiring an integer as parameter
     specificFlag <- flagParam (FlagShort 'p'
         <> FlagLong "problem"
-        <> FlagDescription "the number of the problem")
+        <> FlagDescription "runs an specific solution by its number")
             (FlagRequired $ \s -> if all isDigit s then Right (read s :: Int)
                                                    else Left "invalid integer")
 

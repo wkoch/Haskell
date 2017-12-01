@@ -22,16 +22,32 @@ library
   exposed-modules:     Lib, Runner
                      , PE001, PE001.Internal
                      , PE002, PE002.Internal
+                     , PE003, PE003.Internal
+                     , PE004, PE004.Internal
+                     , PE005, PE005.Internal
+                     , PE006, PE006.Internal
+                     , PE007, PE007.Internal
+                     , PE008, PE008.Internal
+                     , PE009, PE009.Internal
+                     , PE010, PE010.Internal
+                     , PE011, PE011.Internal
+                     , PE012, PE012.Internal
+                     , PE013, PE013.Internal
+                     , PE014, PE014.Internal
   build-depends:       base >= 4.7 && < 5
+                     , primes
+                     , text
   default-language:    Haskell2010
 
 executable ProjectEuler-exe
   hs-source-dirs:      app
   main-is:             Main.hs
-  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
   build-depends:       base
                      , ProjectEuler
                      , cli
+                     , primes
+                     , text
   default-language:    Haskell2010
 
 test-suite ProjectEuler-test
@@ -41,7 +57,10 @@ test-suite ProjectEuler-test
   build-depends:       base
                      , ProjectEuler
                      , hspec
-  other-modules:       PE001Spec, PE002Spec
+                     , text
+  other-modules:       PE001Spec, PE002Spec, PE003Spec, PE004Spec, PE005Spec
+                     , PE006Spec, PE007Spec, PE008Spec, PE009Spec, PE010Spec
+                     , PE011Spec, PE012Spec, PE013Spec, PE014Spec
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
   default-language:    Haskell2010
 

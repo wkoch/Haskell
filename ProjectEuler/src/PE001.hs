@@ -1,7 +1,6 @@
 module PE001 (solvePE001) where
 
 import Data.Function
-import Lib
 import PE001.Internal
 
 solvePE001 :: IO ()
