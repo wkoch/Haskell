@@ -16,23 +16,9 @@ import PE013
 import PE014
 
 runAll :: IO ()
-runAll = do
-    run 1
-    run 2
-    run 3
-    run 4
-    run 5
-    run 6
-    run 7
-    run 8
-    run 9
-    run 10
-    run 11
-    run 12
-    run 13
-    run 14
+runAll = mapM_ run [1..14]
 
-run :: Int -> IO ()    
+run :: Int -> IO ()
 run 1 = solvePE001
 run 2 = solvePE002
 run 3 = solvePE003
